@@ -70,10 +70,10 @@ kubectl get pods
 NAME    READY   STATUS    RESTARTS   AGE
 nginx   1/1     Running   0          39s
 
-13. Pod 建置完成後，使用 kubectl port-forward <name> <server port>:<container port> 指令與 Pod 互動
+3. Pod 建置完成後，使用 kubectl port-forward <name> <server port>:<container port> 指令與 Pod 互動
 ```
 kubectl port-forward nginx 8080:80
 ```
 8080:80: 將主機 Port 8080 的流量轉移到 Container 的 Port 80
 
-11.在瀏覽器輸入http://127.0.0.1:8080/
+4.在瀏覽器輸入http://127.0.0.1:8080/
