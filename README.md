@@ -19,11 +19,11 @@ minikube version
 (輸出結果)  
 minikube version: v1.31.1
 
-4. 設定權限
+5. 設定權限
 ```
 sudo chmode 666 /var/run/docker.sock
 ```
-5. 確認 Kubectl 是否成功安裝
+6. 確認 Kubectl 是否成功安裝
 ```
 kubectl version --short
 ```
@@ -33,7 +33,7 @@ Client Version: v1.27.2
 Kustomize Version: v5.0.1
 Server Version: v1.27.4
 
-6. 使用 Minikube 建立 Kubernetes Cluster
+7. 使用 Minikube 建立 Kubernetes Cluster
 ```
 minikube start --driver=docker --memory 4096
 ```
@@ -43,7 +43,7 @@ minikube start --driver=docker --memory 4096
 minikube start
 ```
 
-10. 確認 kubectl 是否能與 Cluster 溝通
+9. 確認 kubectl 是否能與 Cluster 溝通
 ```
 kubectl cluster-info
 ```
@@ -52,7 +52,7 @@ kubectl cluster-info
 Kubernetes control plane is running at https://127.0.0.1:53266
 CoreDNS is running at https://127.0.0.1:53266/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
-##測試 Kubernetes 環境
+## 測試 Kubernetes 環境
 1. 使用 kubectl run <name> 指令建立 Pod
 ```
 kubectl run nginx --image=nginx --restart=Never
