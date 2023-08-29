@@ -51,29 +51,3 @@ kubectl cluster-info
 (輸出結果)  
 Kubernetes control plane is running at https://127.0.0.1:53266
 CoreDNS is running at https://127.0.0.1:53266/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-## 測試 Kubernetes 環境
-1. 使用 kubectl run <name> 指令建立 Pod
-```
-kubectl run nginx --image=nginx --restart=Never
-```
-
-(輸出結果)  
-pod/nginx created
-
-2. 使用 kubectl get pods 查看 Pods
-```
-kubectl get pods
-```
-
-(輸出結果)  
-NAME    READY   STATUS    RESTARTS   AGE
-nginx   1/1     Running   0          39s
-
-3. Pod 建置完成後，使用 kubectl port-forward <name> <server port>:<container port> 指令與 Pod 互動
-```
-kubectl port-forward nginx 8080:80
-```
-8080:80: 將主機 Port 8080 的流量轉移到 Container 的 Port 80
-
-4.在瀏覽器輸入http://127.0.0.1:8080/
