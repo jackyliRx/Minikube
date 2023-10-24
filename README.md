@@ -27,6 +27,11 @@ sudo chmode 666 /var/run/docker.sock
 ```
 kubectl version --short
 ```
+如果無法順利執行，請解決衝突
+Exiting due to DRV_AS_ROOT: The "docker" driver should not be used with root privileges.
+```
+minikube start --force --driver=docker
+```
 
 (輸出結果)  
 Client Version: v1.27.2
