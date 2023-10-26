@@ -21,13 +21,13 @@ minikube version: v1.31.1
 
 5. 設定權限
 ```
-sudo chmode 666 /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 ```
 6. 確認 Kubectl 是否成功安裝
 ```
 kubectl version --short
 ```
-如果無法順利執行，請解決衝突
+如果無法順利執行，請解決衝突  
 Exiting due to DRV_AS_ROOT: The "docker" driver should not be used with root privileges.
 ```
 minikube start --force --driver=docker
